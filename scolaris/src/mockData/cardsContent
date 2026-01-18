@@ -1,0 +1,20 @@
+export const cardsContent = [
+  {
+    step: "1",
+    title: "Free Consultation",
+    text: "Book a session so we can assess your level, goals and preferred learning style.",
+    icon: "/icons/assessment.svg",
+  },
+  {
+    step: "2",
+    title: "Start Individual Lessons",
+    text: "Get 1 one 1 lessons designed specifically around your objectives, schedule, and pace.",
+    icon: "/icons/lessons.svg",
+  },
+  {
+    step: "3",
+    title: "Track Progress & Improve",
+    text: "Receive feedback, structured progression, and guidance so know what to focus on.",
+    icon: "/icons/progress.svg",
+  },
+];

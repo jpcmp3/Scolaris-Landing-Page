@@ -12,11 +12,11 @@ export default function Hero() {
       />
 
       {/* Bottom fade */}
-      <div
-        className="absolute bottom-0 left-0 w-full h-[18%]
+      {/* <div
+        className="absolute bottom-0 left-0 w-full h-[8%]
                bg-gradient-to-t from-white to-transparent
                pointer-events-none"
-      />
+      /> */}
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left: Text */}
         <div className="text-white flex-col justify-center">
@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <CTAbutton />
+          <CTAbutton title="Book a class" />
         </div>
 
         {/* Right: Visual (placeholder) */}
