@@ -2,10 +2,11 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { NavbarMenu } from "../mockData/navbarItems";
 import CTAbutton from "./Helpers/CTAbutton";
+import LanguageDropdown from "./Helpers/LanguageDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="w-full fixed top-0 left-0 z-50  text-white">
+    <nav className="w-full fixed top-0 left-0 z-50  text-white backdrop-blur-2xl">
       <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
         {/* 1️⃣ Logo */}
         <a href="/" className="flex gap-1">
@@ -28,7 +29,8 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <div className="hidden md:block">
+        <div className="flex gap-4">
+          <LanguageDropdown />
           <CTAbutton title="Get Started" />
         </div>
         {/* 3️⃣ Mobile menu button */}

@@ -6,10 +6,10 @@ export default function Hero() {
   return (
     <section id="home" className="min-h-screen flex items-center">
       {/* Animated background */}
-      <div
+      {/* <div
         className="absolute inset-0 -z-10 bg-[linear-gradient(-45deg,#ee7752,#e73c7e,#f9ac55,#23d5ab,#ee7752,#e73c7e,#f9ac55,#23d5ab)]
                bg-[length:400%_400%] animate-[gradient_15s_ease_infinite]"
-      />
+      /> */}
 
       {/* Bottom fade */}
       {/* <div
@@ -24,7 +24,7 @@ export default function Hero() {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold  leading-tight mb-4">
             1 on 1 Language Lessons with a{" "}
-            <span className="text-indigo-900">Certified Tutor</span>
+            <span className="text-blue-400">Certified Tutor</span>
           </h1>
 
           <p className="text-xl max-w-xl mb-8">
@@ -32,7 +32,7 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <CTAbutton title="Book a class" />
+          <CTAbutton title="Book a Class" />
         </div>
 
         {/* Right: Visual (placeholder) */}

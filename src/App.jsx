@@ -12,8 +12,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Hero />
-      <About />
+      <section className="relative bg-gradient-to-b from-indigo-950 via-indigo-900 to-slate-900">
+        <Hero />
+        <About />
+      </section>
+
       <Lessons />
       <Pricing />
       <Reviews />

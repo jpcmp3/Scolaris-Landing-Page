@@ -6,9 +6,9 @@ const CTAbutton = ({ title }) => {
       href="#booking"
       className="inline-flex items-center justify-center
         rounded-full px-6 py-2 font-semibold
-        bg-indigo-900 text-white
-        hover:bg-indigo-950
-        transition-colors duration-900
+        bg-blue-300 text-black
+        hover:bg-indigo-100
+        transition-colors duration-300
         "
     >
       {title}
