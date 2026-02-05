@@ -1,17 +1,17 @@
 import React from "react";
-import { servicesContent } from "../mockData/servicesContent";
-import ServiceCard from "./Helpers/ServiceCard";
+import { servicesContent } from "../mockData/servicesContent.js";
+import LessonCard from "./Helpers/LessonCard";
 
 const Lessons = () => {
   return (
-    <section className="relative py-24 bg-amber-100">
+    <section className="relative py-24">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
-        <div className="mb-14 max-w-2xl">
-          <h2 className="mb-4 text-3xl font-bold  sm:text-4xl">
+        <div className="mb-10 text-center max-w-2xl mx-auto">
+          <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
             Choose the right type of lesson for you
           </h2>
-          <p className="">
+          <p>
             Every student is different. Lessons are designed around your level,
             objectives, and preferred learning style.
           </p>
@@ -20,7 +20,12 @@ const Lessons = () => {
         {/* Grid */}
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {servicesContent.map((service, index) => (
-            <ServiceCard key={index} {...service} />
+            <LessonCard
+              key={index}
+              title={service.title}
+              text={service.text}
+              icon={service.Icon}
+            />
           ))}
         </div>
       </div>

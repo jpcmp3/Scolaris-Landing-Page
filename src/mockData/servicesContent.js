@@ -18,12 +18,11 @@ export const servicesContent = [
     text: "Flexible, goal-oriented lessons for conversation, travel, work, or exam preparation – designed to fit your pace and lifestyle.",
     Icon: User,
   },
+
   {
     title: "Exam Preparation",
     text: `- TOEFL, TOEIC, Cambridge, 英検
-- JLPT N5-N3
-- DILF, DELF, DALF, TEF
-- ALPT`,
+- JLPT N5-N3`,
     Icon: BookOpen,
   },
   {

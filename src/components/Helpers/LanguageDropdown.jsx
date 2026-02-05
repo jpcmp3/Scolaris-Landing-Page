@@ -10,7 +10,7 @@ const languages = [
 
 const LanguageDropdown = () => {
   const [open, setOpen] = useState(false);
-  const currentLang = "en"; // placeholder for later i18n
+  const currentLang = "en";
 
   return (
     <div className="relative">
@@ -19,9 +19,9 @@ const LanguageDropdown = () => {
         onClick={() => setOpen((prev) => !prev)}
         className="
           flex items-center gap-2
-          rounded-full border border-white/20
-          px-4 py-2 text-sm text-white
-          transition hover:bg-white/10
+          rounded-full border 
+          px-4 py-2 text-sm 
+          transition hover:bg-white/50
         "
       >
         EN
@@ -37,8 +37,8 @@ const LanguageDropdown = () => {
           className="
             absolute right-0 z-50 mt-2 w-40
             overflow-hidden rounded-xl
-            border border-white/20
-            bg-indigo-950/95 backdrop-blur
+             
+            bg-gray-100 backdrop-blur
             shadow-lg
           "
         >
@@ -49,15 +49,14 @@ const LanguageDropdown = () => {
               <button
                 key={code}
                 onClick={() => {
-                  // later: setLanguage(code)
                   setOpen(false);
                 }}
                 className={`
                   w-full px-4 py-2 text-left text-sm transition
                   ${
                     isActive
-                      ? "bg-white/10 font-medium text-white"
-                      : "text-white hover:bg-white/10"
+                      ? "bg-black font-medium text-white"
+                      : "text-[#1F2937] hover:bg-black/10"
                   }
                 `}
               >

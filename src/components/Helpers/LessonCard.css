@@ -1,0 +1,100 @@
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 2rem;
+}
+
+.card {
+  background-color: var(--card-color, rgb(23, 23, 23));
+  border-radius: 10px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 400px;
+  height: 260px;
+  transition: transform 0.5s;
+}
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.1),
+    transparent 30%
+  );
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 3;
+}
+
+.card:hover::before,
+.card-hovered::before {
+  opacity: 1;
+}
+
+.card-content {
+  background-color: transparent;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute;
+  inset: 1px;
+  padding: 10px;
+  z-index: 2;
+}
+
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card span {
+  color: rgb(240, 240, 240);
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+}
+
+.card-info-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 16px;
+  margin-top: auto;
+}
+
+.card-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.card-info-title > h3 {
+  font-size: 1.1em;
+  line-height: 0;
+  padding-bottom: 1.3em;
+}
+
+.card-info-title > h4 {
+  font-size: 0.85em;
+  line-height: 1.5;
+}
+
+.card-transitioning {
+  transition: transform 0.5s;
+}
+
+.card-hovered {
+  transform: translateY(-10px);
+}

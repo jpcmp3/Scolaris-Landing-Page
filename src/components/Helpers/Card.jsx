@@ -3,9 +3,9 @@ import React from "react";
 const Card = ({ step, title, text, icon: Icon }) => {
   return (
     <div
-      className="text-white
+      className="
         group relative overflow-hidden rounded-3xl
-        border border-white/20 p-10 text-center
+        border border-black/50 p-10 text-center
         transition-colors duration-300
       "
     >
@@ -29,7 +29,7 @@ const Card = ({ step, title, text, icon: Icon }) => {
         <div
           className="
             mx-auto mb-6 flex h-40 w-40 items-center justify-center
-            rounded-full border border-white/20 bg-white/10
+            rounded-full border border-white/20 bg-gray-200
             transition-all duration-300
             group-hover:bg-white group-hover:border-black
           "
@@ -48,9 +48,7 @@ const Card = ({ step, title, text, icon: Icon }) => {
         </h3>
 
         {/* Text */}
-        <p className="text-white/80 transition-colors group-hover:text-black">
-          {text}
-        </p>
+        <p className="transition-colors group-hover:text-black">{text}</p>
       </div>
     </div>
   );

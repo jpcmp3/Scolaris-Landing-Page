@@ -6,13 +6,15 @@ import LanguageDropdown from "./Helpers/LanguageDropdown";
 
 const Navbar = () => {
   return (
-    <nav className="w-full fixed top-0 left-0 z-50  text-white backdrop-blur-2xl">
-      <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <nav
+      className="
+    fixed top-0 left-0 z-50 w-full backdrop-blur-3xl"
+    >
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-4 ">
         {/* 1️⃣ Logo */}
         <a href="/" className="flex gap-1">
-          <div></div>
           <img src={logo} alt="MyLogo" className="h-8" />
-          <span className="text-2xl font-semibold">Scolaris</span>
+          <span className="text-2xl font-bold">Scolaris</span>
         </a>
 
         {/* 2️⃣ Desktop menu links */}
@@ -21,7 +23,7 @@ const Navbar = () => {
             <li key={item.id}>
               <a
                 href={item.link}
-                className=" relative font-medium  tracking-wide hover:text-amber-300 transition-colors duration-200"
+                className=" relative font-medium  tracking-wide hover:text-blue-400 transition-colors duration-200"
               >
                 {item.title}
               </a>
@@ -36,7 +38,7 @@ const Navbar = () => {
         {/* 3️⃣ Mobile menu button */}
         <button className="md:hidden ">☰</button>
       </div>
-      <hr className="text-white" />
+      <hr className="text-blue" />
     </nav>
   );
 };

@@ -17,7 +17,7 @@ export const cardsContent = [
   {
     step: "3",
     title: "Track Progress & Improve",
-    text: "Receive feedback, structured progression, and guidance so you know what to focus on.",
+    text: "Receive feedback, structured progression, and guidance so you know what to work on.",
     icon: TrendingUp,
   },
 ];
