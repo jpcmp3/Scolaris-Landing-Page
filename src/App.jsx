@@ -6,7 +6,7 @@ import Lessons from "./components/Lessons";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
 import Teacher from "./components/Teacher";
-import GG from "./components/GG";
+
 
 import FAQ from "./components/FAQ";
 import Quote from "./components/Quote";
