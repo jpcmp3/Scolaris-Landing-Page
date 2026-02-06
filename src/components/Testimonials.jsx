@@ -65,11 +65,9 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 ">
       <div className="mx-auto max-w-7xl px-4">
-        <h2 className="mb-4 text-3xl font-bold sm:text-4xl text-center mb-15">
-          Hear what other students think
-        </h2>
+        <h2>Hear what other students think</h2>
         <div className="grid gap-5 md:grid-cols-3">
           {testimonials.map((t) => (
             <TestimonialCard key={t.id} {...t} />

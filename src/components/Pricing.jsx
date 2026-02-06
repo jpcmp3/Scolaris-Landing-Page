@@ -58,34 +58,30 @@ const Pricing = () => {
 
   return (
     <>
-      <section className="flex items-center justify-center flex-col py-15 px-4 bg-amber-50">
+      <section className="flex flex-col items-center justify-center px-4 pt-5 pb-15 ">
         {/* Top toggle */}
         <div className="mt-6 flex bg-zinc-100 p-1.5 rounded-full border">
-          <button
-            onClick={() => setIsPackage(false)}
-            className={`px-4 py-2 rounded-full text-xs cursor-pointer transition ${
-              !isPackage
-                ? "bg-zinc-800 hover:bg-zinc-900 text-white"
-                : "text-gray-600"
-            }`}
-          >
-            One time
-          </button>
-          <button
-            onClick={() => setIsPackage(true)}
-            className={`px-4 py-2 rounded-full text-xs cursor-pointer ${
-              isPackage
-                ? "bg-zinc-800 hover:bg-zinc-900 text-white"
-                : "text-gray-600"
-            }`}
-          >
-            Package
-          </button>
+          {[
+            { label: "One time", value: false },
+            { label: "Package", value: true },
+          ].map(({ label, value }) => (
+            <button
+              key={label}
+              onClick={() => setIsPackage(value)}
+              className={`px-4 py-2 rounded-full text-xs cursor-pointer transition ${
+                isPackage === value
+                  ? "bg-zinc-800 hover:bg-zinc-900 text-white"
+                  : "text-gray-600"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
 
         {/* Cards */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pricingData.map((item) => {
+          {pricingData.map((item, index) => {
             const duration = durations[item.id];
             const price =
               item.prices[isPackage ? "package" : "single"][duration];
@@ -93,13 +89,20 @@ const Pricing = () => {
             return (
               <div
                 key={item.id}
-                className="border border-zinc-500 rounded-2xl p-6 flex flex-col items-start max-w-md transition duration-300 hover:-translate-y-1 bg-amber-100"
+                className={`
+              border border-zinc-500 rounded-2xl p-6 max-w-md
+              flex flex-col items-start
+              transition duration-300 hover:-translate-y-1
+              bg-amber-100
+              ${index !== 1 ? "lg:translate-y-10" : ""}
+            `}
               >
-                <h1 className="font-medium text-3xl text-slate-800 mt-1">
+                {/* Title */}
+                <h3 className="mt-1 text-3xl font-medium text-slate-800">
                   {item.name}
-                </h1>
+                </h3>
 
-                <p className="text-sm text-zinc-700 mt-2">{item.description}</p>
+                <p className="mt-2 text-sm text-zinc-700">{item.description}</p>
 
                 {/* Duration toggle */}
                 <div className="mt-5 flex bg-zinc-100 p-1 rounded-full border">
@@ -124,19 +127,20 @@ const Pricing = () => {
                 </div>
 
                 {/* Price */}
-                <h1 className="font-medium text-5xl  mt-6">${price}</h1>
+                <h3 className="mt-6 text-5xl font-medium">${price}</h3>
 
                 <button
-                  className="w-full px-4 py-3 rounded-full cursor-pointer text-sm mt-8 
-                    bg-gray-800 hover:bg-gray-900 text-white font-semibold"
+                  className="w-full mt-8 px-4 py-3 rounded-full text-sm font-semibold
+                bg-gray-800 hover:bg-gray-900 text-white"
                 >
                   Book Class
                 </button>
 
+                {/* Features */}
                 <div className="w-full mt-8 space-y-2.5 pb-4">
-                  {item.features.map((feature, index) => (
+                  {item.features.map((feature, i) => (
                     <p
-                      key={index}
+                      key={i}
                       className="flex items-center gap-3 text-sm text-zinc-500"
                     >
                       <span className="size-3 rounded-full bg-zinc-300 flex items-center justify-center shrink-0">

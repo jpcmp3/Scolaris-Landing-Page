@@ -1,10 +1,12 @@
 import React from "react";
 import { servicesContent } from "../mockData/servicesContent.js";
 import LessonCard from "./Helpers/LessonCard";
+import QuoteCard from "./Helpers/QuoteCard";
+import CTAbutton from "./Helpers/CTAbutton";
 
 const Lessons = () => {
   return (
-    <section className="relative py-24">
+    <section className="relative py-20 bg-gray-100">
       <div className="mx-auto max-w-7xl px-6">
         {/* Heading */}
         <div className="mb-10 text-center max-w-2xl mx-auto">
@@ -28,6 +30,10 @@ const Lessons = () => {
             />
           ))}
         </div>
+      </div>{" "}
+      <div className="pt-10 text-center space-y-5">
+        <QuoteCard text="Get ahead of others. Accelerate your learning with a professional." />
+        <CTAbutton title="Book a Class" length="80" />
       </div>
     </section>
   );

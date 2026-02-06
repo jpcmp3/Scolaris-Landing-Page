@@ -5,27 +5,28 @@ import About from "./components/About";
 import Lessons from "./components/Lessons";
 import Pricing from "./components/Pricing";
 import Testimonials from "./components/Testimonials";
+import Teacher from "./components/Teacher";
 
 import FAQ from "./components/FAQ";
-import Footer from "./components/Footer";
+import Quote from "./components/Quote";
 
 function App() {
   return (
     <>
       <Navbar />
-
-      <Hero />
-      <About />
-      <div className="bg-gray-100">
-        <Lessons />
+      <div className="bg-gradient-to-b from-purple-100  to-indigo-100">
+        <Hero />
+        <About />
       </div>
+
+      <Lessons />
 
       <Testimonials />
       <Pricing />
 
       <FAQ />
 
-      <Footer />
+      <Quote />
     </>
   );
 }

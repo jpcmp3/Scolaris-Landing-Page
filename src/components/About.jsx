@@ -9,9 +9,7 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Section heading */}
         <div className="text-center mb-6">
-          <h2 className="text-3xl md:text-4xl font-bold ">
-            Start your language journey today!
-          </h2>
+          <h2>Start your language journey today!</h2>
           <p className="mt-4 text-xl">
             with courses specificlly designed for your needs.
           </p>

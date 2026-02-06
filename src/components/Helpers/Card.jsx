@@ -13,7 +13,7 @@ const Card = ({ step, title, text, icon: Icon }) => {
       <div
         className="
           absolute inset-x-0 bottom-0 h-0
-          bg-lime-300 transition-all duration-500
+          bg-purple-300 transition-all duration-500
           group-hover:h-full
         "
       />

@@ -5,7 +5,7 @@ import heroimage from "../assets/video-img.jpg";
 // src/components/Hero.jsx
 export default function Hero() {
   return (
-    <section id="home" className="pt-56 pb-32 flex items-center">
+    <section id="home" className="pt-56 pb-32 flex items-center ">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left: Text */}
         <div className="flex-col justify-center">
