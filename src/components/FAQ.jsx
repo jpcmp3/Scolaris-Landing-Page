@@ -4,7 +4,7 @@ import { faqContent } from "../mockData/FAQContent";
 
 function FAQ() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-20 ">
+    <div className="max-w-3xl mt-15 mx-auto px-4 py-20 ">
       <h2>Frequently Asked Questions</h2>
       <FAQAccordion items={faqContent} />
     </div>

@@ -68,7 +68,7 @@ const Testimonials = () => {
     <section className="py-20 ">
       <div className="mx-auto max-w-7xl px-4">
         <h2>Hear what other students think</h2>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="pt-8 grid gap-5 md:grid-cols-3">
           {testimonials.map((t) => (
             <TestimonialCard key={t.id} {...t} />
           ))}

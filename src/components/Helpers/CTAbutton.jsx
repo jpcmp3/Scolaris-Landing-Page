@@ -9,7 +9,7 @@ const CTAbutton = ({ title, length = 25 }) => {
         inline-flex items-center justify-center
         rounded-full py-2 font-semibold
         bg-[#1F2937] text-[#F9FAFB]
-        hover:bg-[#111827]
+        hover:bg-[#374c81]
         hover:scale-105
       "
     >

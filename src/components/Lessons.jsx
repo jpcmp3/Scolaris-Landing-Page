@@ -2,7 +2,6 @@ import React from "react";
 import { servicesContent } from "../mockData/servicesContent.js";
 import LessonCard from "./Helpers/LessonCard";
 import QuoteCard from "./Helpers/QuoteCard";
-import CTAbutton from "./Helpers/CTAbutton";
 
 const Lessons = () => {
   return (
@@ -33,7 +32,6 @@ const Lessons = () => {
       </div>{" "}
       <div className="pt-10 text-center space-y-5">
         <QuoteCard text="Get ahead of others. Accelerate your learning with a professional." />
-        <CTAbutton title="Book a Class" length="80" />
       </div>
     </section>
   );
